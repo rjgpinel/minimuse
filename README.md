@@ -1,4 +1,4 @@
-# RecVis 22/23 - Multimodal - MUjoco Simulation Environments
+# RecVis 22/23 - Multimodal MUjoco Simulation Environments
 
 ![Push-v0 illustration](https://github.com/rjgpinel/minimuse/blob/main/img/minimuse_sim.png)
 
