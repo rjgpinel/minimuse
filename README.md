@@ -4,11 +4,19 @@
 
 ## Run expert trajectories
 
-Run
+Run and visualize expert trajectories with
 ```
 python -m muse.run --env Push-v0
 ```
 Use `--render` to generate mp4 videos from cameras.
+
+## Dataset collection
+To collect a dataset run:
+
+```
+python -m minimuse.collect --env Push-v0 --output-dir output_dataset/ --episodes 1000 --num-workers 25
+```
+with `output_dataset/` the directory where the dataset will be stored.
 
 ## Installation
 
@@ -40,14 +48,4 @@ To render the scene in a GUI, add to your `.bashrc`:
 export LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libGLEW.so
 ```
 To render images from a camera, run `unset LD_PRELOAD`. Currently it is not possible to both have a GUI window and render camera images.
-
-
-## Dataset collection
-To collect a dataset run:
-
-```
-python -m minimuse.collect --env Push-v0 --output-dir output_dataset/ --episodes 1000 --num-workers 25
-```
-with `output_dataset/` the directory where the dataset will be stored.
-
 
