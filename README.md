@@ -16,7 +16,7 @@ To collect a dataset run:
 ```
 python -m minimuse.collect --env Push-v0 --output-dir output_dataset/ --episodes 1000 --num-workers 25
 ```
-with `output_dataset/` the directory where the dataset will be stored.
+with `output_dataset/` the directory where the dataset will be stored and 1000 trajectories.
 
 ## Installation
 
