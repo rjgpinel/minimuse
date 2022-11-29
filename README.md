@@ -46,7 +46,7 @@ To render images from a camera, run `unset LD_PRELOAD`. Currently it is not poss
 To collect a dataset run:
 
 ```
-python collect.py --output-dir output_dataset/ --episodes 1000 --num-workers 25
+python -m minimuse.collect --env Push-v0 --output-dir output_dataset/ --episodes 1000 --num-workers 25
 ```
 with `output_dataset/` the directory where the dataset will be stored.
 
