@@ -77,7 +77,9 @@ def main(args):
             env.unwrapped.render()
 
         if args.render:
-            im = np.hstack((obs["rgb_frontal_camera"], obs["rgb_lateral_camera"]))
+            im = np.hstack(
+                [[obs[f"rgb_{cam_name}"]] for cam_name in env.unwrapped.cam_list]
+            )
             video_writer.writeFrame(im)
 
     actions = np.stack(actions)
