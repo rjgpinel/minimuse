@@ -6,7 +6,7 @@
 
 Run and visualize expert trajectories with
 ```
-python -m muse.run --env Push-v0
+python -m minimuse.run --env Push-v0
 ```
 Use `--render` to generate mp4 videos from cameras.
 
