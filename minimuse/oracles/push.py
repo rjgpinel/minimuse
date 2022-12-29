@@ -2,7 +2,6 @@ import numpy as np
 
 from minimuse.core.constants import MAX_TOOL_VELOCITY, CONTROLLER_DT
 from minimuse.core.utils import muj_to_std_quat, quat_to_euler
-from minimuse.script import Script
 from minimuse.oracles.utils import rotate, theta_to_rotation2d, get_theta_from_vector
 
 
