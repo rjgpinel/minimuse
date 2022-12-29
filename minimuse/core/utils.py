@@ -32,11 +32,6 @@ def std_to_muj_quat(quat):
     return muj_quat
 
 
-def euler_to_quat(euler, degrees):
-    rotation = Rotation.from_euler("xyz", euler, degrees=degrees)
-    return rotation.as_quat()
-
-
 def xmat_to_std_quat(xmat):
     rotation = Rotation.from_matrix(xmat)
     return rotation.as_quat()
@@ -49,3 +44,34 @@ def reset_mocap_welds(sim):
             if sim.model.eq_type[i] == mujoco_py.const.EQ_WELD:
                 sim.model.eq_data[i, :] = np.array([0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0])
     sim.forward()
+
+
+def mul_quat(quat0, quat1):
+    rot0 = Rotation.from_quat(quat0)
+    rot1 = Rotation.from_quat(quat1)
+    rot = rot0 * rot1
+    return rot.as_quat()
+
+
+def inv_quat(quat):
+    rotation = Rotation.from_quat(quat)
+    inv_rotation = rotation.inv()
+    return inv_rotation.as_quat()
+
+
+def get_axis_from_quat(quat, undefined=np.zeros(3)):
+    tolerance = 1e-17
+    vector = quat[0:3]
+    norm = np.linalg.norm(vector)
+    if norm < tolerance:
+        # infinite set of possible axes
+        return undefined
+    else:
+        return vector / norm
+
+
+def get_angle_from_quat(quat):
+    vector = quat[0:3]
+    scalar = quat[-1]
+    norm = np.linalg.norm(vector)
+    return wrap_angle(2.0 * atan2(norm, scalar))
