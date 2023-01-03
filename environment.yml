@@ -4,6 +4,7 @@ channels:
   - conda-forge
   - anaconda
   - menpo
+  - pytorch
 dependencies:
   - python
   - gym
@@ -13,6 +14,9 @@ dependencies:
   - glew
   - patchelf
   - ffmpeg
+  - tqdm
+  - einops
+  - pytorch
   - pip
   - pip:
       - mujoco-py
