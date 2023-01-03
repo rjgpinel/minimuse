@@ -19,7 +19,6 @@ dependencies:
   - einops
   - pytorch
   - torchvision
-  - pytorch-cuda=11.6
   - pip
   - pip:
       - mujoco-py
