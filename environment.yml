@@ -5,6 +5,7 @@ channels:
   - anaconda
   - menpo
   - pytorch
+  - nvidia
 dependencies:
   - python
   - gym
@@ -17,6 +18,8 @@ dependencies:
   - tqdm
   - einops
   - pytorch
+  - torchvision
+  - pytorch-cuda=11.6
   - pip
   - pip:
       - mujoco-py
