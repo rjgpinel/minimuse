@@ -8,9 +8,15 @@
 
 Download mujoco 2.1.0 [binaries](https://mujoco.org/download) and extract them in `~/.mujoco/mujoco210`.<br/>
 
-Then setup the environment variable by adding to your `.bashrc` the following:
+Then setup the environment variable by adding to your `.bashrc` (and running in your terminal session) the following:
 ```
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$HOME/.mujoco/mujoco210/bin:/usr/lib/nvidia
+```
+
+
+On a local machine install the following libraries with sudo rights (from mujoco-py):
+```
+sudo apt install libosmesa6-dev libgl1-mesa-glx libglfw3
 ```
 
 ### Conda Environment
