@@ -123,7 +123,6 @@ def collect(worker_id, env_name, output_path, seeds, data_queue):
 
         # if trajectory is failed filter do not record in dataset
         if not info["success"]:
-            print(seed)
             continue
 
         for i, step in enumerate(episode_traj):

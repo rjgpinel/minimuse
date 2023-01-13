@@ -5,7 +5,7 @@
     </asset>
     <worldbody>
         <body mocap="true" childclass="tool" name="broom_mocap" pos="0.4 0.0 0.1">
-            <geom name="broom" size="0.0175 0.035" type="cylinder" material="broom_mat" rgba="0.3 0.3 0.3 1" />
+            <geom name="broom" size="0.0175 0.015" type="cylinder" material="broom_mat" rgba="0.3 0.3 0.3 1" />
         </body>
     </worldbody>
 </mujoco>

@@ -7,7 +7,7 @@ WARMUP_STEPS = 1000
 # controller rate - second
 CONTROLLER_DT = 0.1
 # (linvel, angvel) - meter / second
-MAX_TOOL_VELOCITY = (0.025, 0.25)
+MAX_TOOL_VELOCITY = (0.02, 0.2)
 
 # camera
 REALSENSE_RESOLUTION = (1280, 720)

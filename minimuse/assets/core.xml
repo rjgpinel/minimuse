@@ -24,8 +24,8 @@
         </default>
 
         <default class="cube0">
-            <joint type="free" damping="0.1" frictionloss="0.3" />
-            <geom condim="3" mass="45" />
+            <joint type="free" damping="0.5" frictionloss="0.3" />
+            <geom condim="3" mass="90" />
         </default>
     </default>
 

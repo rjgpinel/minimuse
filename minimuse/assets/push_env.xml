@@ -21,7 +21,7 @@
             <geom name="cube1" size="0.015 0.015 0.015" type="box"  material="cube1_mat" rgba="0.502 0.769 0.388 1" />
             <site name="cube1" size="0.015 0.015 0.015" rgba="1 0 0 1" type="sphere" />
         </body>
-        <body mocap="true" name="markers" pos="-0.15 0.0 0.03">
+        <body mocap="true" name="markers" pos="-0.15 0.0 0.026">
             <body name="marker0">
                 <site name="marker0" size="0.03 0.03 0.01" pos="0.0 0.075 0.0" type="box" rgba="0 0 0 0" />
                 <geom name="marker0" size="0.03 0.03 0.01" pos="0.0 0.075 0.0" type="plane" material="marker0_mat"  rgba="0.592 0.188 0.365 1" />

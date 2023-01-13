@@ -4,7 +4,7 @@ envs = [
     dict(
         id="Push-v0",
         entry_point="minimuse.envs.push:PushEnv",
-        max_episode_steps=600,
+        max_episode_steps=800,
         reward_threshold=1.0,
     ),
 ]

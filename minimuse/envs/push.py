@@ -32,9 +32,9 @@ class PushEnv(BaseEnv):
         self.cubes_color = [(0.502, 0.769, 0.388), (0.502, 0.769, 0.388)]
         self.markers_color = [(0.592, 0.188, 0.365), (0.592, 0.188, 0.365)]
 
-        self.default_tool_height = 0.065
-        self.min_x_distance = 0.01
-        self.min_y_distance = 0.01
+        self.default_tool_height = 0.04
+        self.min_x_distance = 0.012
+        self.min_y_distance = 0.012
 
         self._initial_tool_pos = np.array([self.workspace[1][0], 0.0, 0.0])
         self._initial_tool_pos[-1] = self.default_tool_height
@@ -100,5 +100,5 @@ class PushEnv(BaseEnv):
 
     def oracle(self):
         return MultimodalPushOracle(
-            self._np_random, self.min_x_distance, self.min_y_distance
+            self._np_random, self.min_x_distance * 0.75, self.min_y_distance * 0.75
         )
